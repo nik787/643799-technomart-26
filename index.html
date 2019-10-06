@@ -17,17 +17,18 @@
             <img src="img/logo.svg" alt="Техномарт" width= "109" height="19">
           </a>
           <form class="form-search" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="form-search__input" id="search" type="search" name="search">
+            <input class="form-search__input" id="search" type="search" name="search" placeholder="Поиск: ">
+            <svg class="icon-search"  fill="#fff" xmlns="http://www.w3.org/2000/svg" width="17" height="17"><path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.7 0 3.282-.58 4.544-1.542L15.586 17 17 15.586zM2 7.5A5.51 5.51 0 0 1 7.5 2 5.51 5.51 0 0 1 13 7.5 5.51 5.51 0 0 1 7.5 13 5.506 5.506 0 0 1 2 7.5z"/></svg>
           </form>
           <ul class="navbar-list">
             <li class="navbar-list__item">
-              <a href="#">Закладки: <span>0</span></a>
+              <a class="button button--navbar button--bookmark" href="#">Закладки: <span>0</span></a>
             </li>
             <li class="navbar-list__item">
-              <a href="#">Корзина: <span>0</span></a>
+              <a class="button button--navbar button--cart" href="#">Корзина: <span>0</span></a>
             </li>
             <li class="navbar-list__item">
-              <a href="#">Оформить заказ</a>
+              <a class="button button--checkout" href="#">Оформить заказ</a>
             </li>
           </ul>
         </div>
@@ -51,35 +52,35 @@
           </div>
           <ul class="profile">
             <li class="profile__item">
-              <a class="profile__link" href="">Войти</a>
+              <a class="button profile__link button--profile button--login" href="">Войти</a>
             </li>
             <li class="profile__item">
-              <a class="profile__link" href="">Регистрация</a>
+              <a class="button profile__link button--profile button--registration" href="">Регистрация</a>
             </li>
           </ul>
         </div>
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-list__item">
-              <a href="">Главная</a>
+              <a class="navigation-list__link" href="">Главная</a>
             </li>
             <li class="navigation-list__item">
-              <a href="">Компания</a>
+              <a class="navigation-list__link" href="">Компания</a>
             </li>
             <li class="navigation-list__item">
-              <a href="catalog.html">Каталог</a>
+              <a class="navigation-list__link" href="catalog.html">Каталог</a>
             </li>
             <li class="navigation-list__item">
-              <a href="">Новости</a>
+              <a class="navigation-list__link" href="">Новости</a>
             </li>
             <li class="navigation-list__item">
-              <a href="">Спецпредложения</a>
+              <a class="navigation-list__link" href="">Спецпредложения</a>
             </li>
             <li class="navigation-list__item">
-              <a href="">Доставка</a>
+              <a class="navigation-list__link" href="">Доставка</a>
             </li>
             <li class="navigation-list__item">
-              <a href="">Контакты</a>
+              <a class="navigation-list__link" href="">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -94,19 +95,19 @@
           <li class="promo-list__item promo-list__item--block">
             <div class="promo-block promo-block--material promo-block--new">
               <h3 class="promo-block__title">Материалы</h3>
-              <a class="button promo-block__button" href="">на любой вкус</a>
+              <a class="button promo-block__button button--promo" href="">на любой вкус</a>
             </div>
           </li>
           <li class="promo-list__item promo-list__item--block">
             <div class="promo-block promo-block--tool">
               <h3 class="promo-block__title">Инструмент</h3>
-              <a class="button promo-block__button" href="">на все случаи</a>
+              <a class="button promo-block__button button--promo" href="">на все случаи</a>
             </div>
           </li>
           <li class="promo-list__item promo-list__item--block">
             <div class="promo-block promo-block--equipment">
               <h3 class="promo-block__title">Техника</h3>
-              <a class="button promo-block__button" href="">для стройки</a>
+              <a class="button promo-block__button button--promo" href="">для стройки</a>
             </div>
           </li>
           <li class="promo-list__item promo-list__item--slider">
@@ -117,29 +118,34 @@
                   <p class="promo-slide__text">
                     Соседям на радость!
                   </p>
-                  <a class="button promo-slide__button" href="">Открыть каталог</a>
+                  <a class="button promo-slide__button button--slide" href="catalog.html">Открыть каталог</a>
                 </li>
                 <li class="promo-slide">
                   <h3 class="promo-slide__title">Перфораторы</h3>
                   <p class="promo-slide__text">
                     Настоящие мужские игрушки
                   </p>
-                  <a class="button promo-slide__button" href="">Открыть каталог</a>
+                  <a class="button promo-slide__button button--slide" href="catalog.html">Открыть каталог</a>
                 </li>
               </ul>
               <div class="promo-slider__navigation">
+                <div class="promo-slider__arrows">
 
+                </div>
+                <div class="promo-slider__dots">
+
+                </div>
               </div>
             </div>
           </li>
           <li class="promo-list__item promo-list__item--block-x2">
             <div class="promo-block promo-block--sale">
               <h3 class="promo-block__title">Скидки 50%</h3>
-              <a class="button promo-block__button" href="">на 350 товаров</a>
+              <a class="button promo-block__button button--promo" href="">на 350 товаров</a>
             </div>
             <div class="promo-block promo-block--delivery">
               <h3 class="promo-block__title">Доставка</h3>
-              <a class="button promo-block__button" href="">бесплатно</a>
+              <a class="button promo-block__button button--promo" href="">бесплатно</a>
             </div>
           </li>
         </ul>
@@ -147,7 +153,7 @@
       <section class="popular popular--goods">
         <div class="popular__top">
           <h2 class="title popular__title">Популярные товары:</h2>
-          <a href="" class="button popular__button">все популярные товары</a>
+          <a href="" class="button popular__button button--popular">все популярные товары</a>
         </div>
         <div class="popular__content">
           <ul class="goods-list">
@@ -156,8 +162,8 @@
                 <div class="product__top">
                   <img class="product__img" src="img/index/item-image-1.jpg" alt="Перфоратор BOSCH" width="218" height="170">
                   <div class="product__popap">
-                    <a class="btn product__button product__button--buy" href="">Купить</a>
-                    <a class="btn product__button product__button--bookmarks" href="">В закладки</a>
+                    <a class="button product__button button--product button--buy" href="">Купить</a>
+                    <a class="button product__button button--product button--bookmarks" href="">В закладки</a>
                   </div>
                 </div>
                 <div class="product__bottom">
@@ -172,8 +178,8 @@
                 <div class="product__top">
                   <img class="product__img" src="img/index/item-image-2.jpg" alt="Перфоратор BOSCH" width="218" height="170">
                   <div class="product__popap">
-                    <a class="btn product__button product__button--buy" href="">Купить</a>
-                    <a class="btn product__button product__button--bookmarks" href="">В закладки</a>
+                    <a class="button product__button button--product button--buy" href="">Купить</a>
+                    <a class="button product__button button--product button--bookmarks" href="">В закладки</a>
                   </div>
                 </div>
                 <div class="product__bottom">
@@ -186,10 +192,10 @@
             <li class="goods-list__item">
               <article class="product product--sale">
                 <div class="product__top">
-                  <img class="product__img" src="img/index/item-image-3.jpg" alt="Перфоратор BOSCH" width="218" height="170">
+                  <img class="product__img" src="img/index/item-image-4.jpg" alt="Перфоратор BOSCH" width="218" height="170">
                   <div class="product__popap">
-                    <a class="btn product__button product__button--buy" href="">Купить</a>
-                    <a class="btn product__button product__button--bookmarks" href="">В закладки</a>
+                    <a class="button product__button button--product button--buy" href="">Купить</a>
+                    <a class="button product__button button--product button--bookmarks" href="">В закладки</a>
                   </div>
                 </div>
                 <div class="product__bottom">
@@ -202,10 +208,10 @@
             <li class="goods-list__item">
               <article class="product product--new">
                 <div class="product__top">
-                  <img class="product__img" src="img/index/item-image-4.jpg" alt="Перфоратор BOSCH" width="218" height="170">
+                  <img class="product__img" src="img/index/item-image-3.jpg" alt="Перфоратор BOSCH" width="218" height="170">
                   <div class="product__popap">
-                    <a class="btn product__button product__button--buy" href="">Купить</a>
-                    <a class="btn product__button product__button--bookmarks" href="">В закладки</a>
+                    <a class="button product__button button--product button--buy" href="">Купить</a>
+                    <a class="button product__button button--product button--bookmarks" href="">В закладки</a>
                   </div>
                 </div>
                 <div class="product__bottom">
@@ -221,7 +227,7 @@
       <section class="popular popular--brands">
         <div class="popular__top">
           <h2 class="title popular__title">Популярные производители:</h2>
-          <a href="" class="button popular__button">все производители</a>
+          <a href="" class="button popular__button button--popular">все производители</a>
         </div>
         <div class="popular__content">
           <ul class="brands-list">
@@ -280,27 +286,13 @@
         </div>
         <div class="service__content">
           <div class="service-slider">
+            <input class="visually-hidden" id="service-slider-1" type="radio" name="service-navigation" checked>
+            <input class="visually-hidden" id="service-slider-2" type="radio" name="service-navigation">
+            <input class="visually-hidden" id="service-slider-3" type="radio" name="service-navigation">
             <div class="service-slider__navigation">
-              <ul class="navigation">
-                <li class="navigation__item">
-                  <label>
-                    Доставка
-                    <input class="visually-hidden" type="radio" name="service-navigation">
-                  </label>
-                </li>
-                <li class="navigation__item">
-                  <label>
-                    Гарантия
-                    <input class="visually-hidden" type="radio" name="service-navigation">
-                  </label>
-                </li>
-                <li class="navigation__item">
-                  <label>
-                    Кредит
-                    <input class="visually-hidden" type="radio" name="service-navigation">
-                  </label>
-                </li>
-              </ul>
+              <label class="navigation-item navigation-item--1" for="service-slider-1">Доставка</label>
+              <label class="navigation-item navigation-item--2" for="service-slider-2">Гарантия</label>
+              <label class="navigation-item navigation-item--3" for="service-slider-3">Кредит</label>
             </div>
             <ul class="service-slider__list">
               <li class="service-slider__item">
@@ -331,6 +323,7 @@
                     Залезть в долговую яму стало проще!
                     Кредитные консультанты придут вам на помощь.
                   </p>
+                  <a class="button service-slide__button button--popular" href="">ОТПРАВИТЬ ЗАЯВКУ</a>
                 </article>
               </li>
             </ul>
@@ -342,10 +335,10 @@
       <section class="company">
         <div class="company__about">
           <div class="about">
-            <h1 class="title about__title">
+            <h1 class="title about__title title--company">
               Компания «Техномарт»
             </h1>
-            <p class="about__decs">
+            <p class="about__decs company--desc">
               Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
             </p>
             <p class="about__text">
@@ -357,20 +350,20 @@
               <li class="about__item">Автотрейдинг</li>
               <li class="about__item">ЖелДорЭкспедиция</li>
             </ul>
-            <a class="button company__button" href="company.html">Подробнее о компании</a>
+            <a class="button company__button button--popular" href="company.html">Подробнее о компании</a>
           </div>
         </div>
         <div class="company__contact">
           <div class="contact">
-            <h2 class="title contact__title">Контакты</h2>
-            <p class="contact__desc">
+            <h2 class="title contact__title title--company">Контакты</h2>
+            <p class="contact__desc company--desc">
               Вы можете забрать товар сами,
               заехав в наш офис:
             </p>
             <a href="https://yandex.ru/maps/-/CGsvvLPm" target="_blank">
               <img src="img/index/map.jpg" alt="Большая Конюшенная улица, 19/8 Санкт-Петербург, Россия">
             </a>
-            <a class="button contact__button" href="form.html">Заблудились? Напишите нам!</a>
+            <a class="button contact__button button--popular" href="form.html">Заблудились? Напишите нам!</a>
           </div>
         </div>
       </section>
@@ -386,7 +379,7 @@
             </a>
             <p class="addr">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-              <a href="tel:+78125550555">+7 (812) 555-05-55 </a>
+              <a class="tel" href="tel:+78125550555">+7 (812) 555-05-55 </a>
             </p>
           </div>
           <div class="footer__navigation">
