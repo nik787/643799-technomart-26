@@ -360,7 +360,7 @@
               Вы можете забрать товар сами,
               заехав в наш офис:
             </p>
-            <a href="https://yandex.ru/maps/-/CGsvvLPm" target="_blank">
+            <a class="maps" href="https://yandex.ru/maps/-/CGsvvLPm" target="_blank">
               <img src="img/index/map.jpg" alt="Большая Конюшенная улица, 19/8 Санкт-Петербург, Россия">
             </a>
             <a class="button contact__button button--popular" href="form.html">Заблудились? Напишите нам!</a>
@@ -464,7 +464,7 @@
               d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z" />
           </svg>
         </button>
-        <div class="map"></div>
+        <div class="map" id="map"></div>
       </div>
       <div class="popup__contact-form">
         <button class="popup__close" type="button" aria-label="Закрыть">
@@ -491,9 +491,24 @@
           </button>
         </form>
       </div>
-
+      <div class="popup__catalog">
+        <button class="popup__close" type="button" aria-label="Закрыть">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+            <path fill="#FB565A"
+              d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z" />
+          </svg>
+        </button>
+        <div class="catalog-modal">
+          <p class="catalog-modal__text">
+            Товар добавлен в корзину!
+          </p>
+          <a href="" class="button catalog-modal__button catalog-modal__button--added">Оформить заказ</a>
+          <a href="" class="button catalog-modal__button catalog-modal__button--continue">Продолжить покупки</a>
+        </div>
+      </div>
     </div>
   </div>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=334b6d6e-e3bb-4b2f-aaf1-c0e7afff19e2&lang=ru_RU"></script>
   <script src="js/main.js"></script>
 </body>
 
