@@ -1412,8 +1412,9 @@ a {
   border-bottom: 1px solid #f7f3ec;
 }
 .filter__form .group--power {
-  border-bottom: none;
   margin-bottom: 53px;
+
+  border-bottom: none;
 }
 .group__list {
   margin: 0;
@@ -1583,8 +1584,9 @@ a {
   border-color: #b5b5b5;
 }
 .group__title--power {
-  letter-spacing: 0.17px;
   margin-bottom: 14px;
+
+  letter-spacing: 0.17px;
 }
 .radio__label {
   position: relative;
@@ -1616,6 +1618,7 @@ a {
 
   width: 5px;
   height: 5px;
+
   border: 5px solid #c5c5c5;
   border-radius: 50%;
   -webkit-transform: rotate(45deg);
