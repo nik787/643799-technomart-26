@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
@@ -112,6 +112,8 @@
           </li>
           <li class="promo-list__item promo-list__item--slider">
             <div class="promo-slider">
+              <input class="visually-hidden" type="radio" name="dot" id="dot-1" checked>
+              <input class="visually-hidden" type="radio" name="dot" id="dot-2">
               <ul class="promo-slider__list">
                 <li class="promo-slide promo-slide--show">
                   <h3 class="promo-slide__title">Дрели</h3>
@@ -128,12 +130,21 @@
                   <a class="button promo-slide__button button--slide" href="catalog.html">Открыть каталог</a>
                 </li>
               </ul>
-              <div class="promo-slider__navigation">
-                <div class="promo-slider__arrows">
 
+              <div class="promo-slider__dots">
+                <label for="dot-1" class="dot dot-1"></label>
+                <label for="dot-2" class="dot dot-2"></label>
+              </div>
+              <div class="promo-slider__arrows">
+                <div class="arrow arrow--left">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40">
+                    <path fill="#fff" d="M19.83-.035l2.09 2.1L4.13 19.947l17.847 17.94-2.1 2.1L-.048 19.947z"/>
+                  </svg>
                 </div>
-                <div class="promo-slider__dots">
-
+                <div class="arrow arrow--right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40">
+                      <path fill="#fff" d="M19.83-.035l2.09 2.1L4.13 19.947l17.847 17.94-2.1 2.1L-.048 19.947z"/>
+                    </svg>
                 </div>
               </div>
             </div>
@@ -338,7 +349,7 @@
             <h1 class="title about__title title--company">
               Компания «Техномарт»
             </h1>
-            <p class="about__decs company--desc">
+            <p class="about__decs">
               Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
             </p>
             <p class="about__text">
@@ -356,7 +367,7 @@
         <div class="company__contact">
           <div class="contact">
             <h2 class="title contact__title title--company">Контакты</h2>
-            <p class="contact__desc company--desc">
+            <p class="contact__desc">
               Вы можете забрать товар сами,
               заехав в наш офис:
             </p>
@@ -486,30 +497,15 @@
           </div>
           <label class="contact-form__label" for="text-area">Текст письма:</label>
           <textarea class="contact-form__textarea" id="text-area" name="text-area" placeholder="В свободной форме"></textarea>
-          <button class="button contact-form__submit" type="submit">
+          <button class="button contact-form__submit button--cart-full" type="submit">
             Отправить
           </button>
         </form>
       </div>
-      <div class="popup__catalog">
-        <button class="popup__close" type="button" aria-label="Закрыть">
-          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
-            <path fill="#FB565A"
-              d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z" />
-          </svg>
-        </button>
-        <div class="catalog-modal">
-          <p class="catalog-modal__text">
-            Товар добавлен в корзину!
-          </p>
-          <a href="" class="button catalog-modal__button catalog-modal__button--added">Оформить заказ</a>
-          <a href="" class="button catalog-modal__button catalog-modal__button--continue">Продолжить покупки</a>
-        </div>
-      </div>
     </div>
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=334b6d6e-e3bb-4b2f-aaf1-c0e7afff19e2&lang=ru_RU"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>
