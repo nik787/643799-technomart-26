@@ -125,7 +125,7 @@
       <aside class="filter">
         <form class="filter__form" action="https://echo.htmlacademy.ru/" method="post">
           <h2 class="filter__title">Фильтр:</h2>
-          <fieldset class="group group--range">
+          <fieldset class="group">
             <legend class="group__title group__title--range">
               Цена:
             </legend>
@@ -145,54 +145,45 @@
             </div>
           </fieldset>
           <fieldset class="group group--brands">
-            <legend class="group__title group__title--brands">Производители:</legend>
+            <legend class="group__title">Производители:</legend>
             <ul class="group__list">
               <li class="group__item">
-                <label class="checkbox">
-                  <input class="checkbox__input visually-hidden" type="checkbox" name="group--brands" id="check-bosch" value="bosh" checked>
-                  <span class="checkbox__label">Bosch</span>
-                </label>
+                <input class="filter__checkbox visually-hidden" id="check-bosch" type="checkbox" name="brands"
+                  value="bosch" checked />
+                <label class="filter__label" for="check-bosch">BOSCH</label>
               </li>
               <li class="group__item">
-                <label class="checkbox">
-                  <input class="checkbox__input visually-hidden" type="checkbox" name="group--brands" id="check-interscol" value="интерскол">
-                  <span class="checkbox__label">Интерскол</span>
-                </label>
+                <input class="filter__checkbox visually-hidden" id="check-interscol" type="checkbox" name="brands"
+                  value="interscol" />
+                <label class="filter__label" for="check-interscol">ИНТЕРСКОЛ</label>
               </li>
               <li class="group__item">
-                <label class="checkbox">
-                  <input class="checkbox__input visually-hidden" type="checkbox" name="group--brands" id="check-makita" value="makita" checked>
-                  <span class="checkbox__label">Makita</span>
-                </label>
+                <input class="filter__checkbox visually-hidden" id="check-makita" type="checkbox" name="brands"
+                  value="makita" checked />
+                <label class="filter__label" for="check-makita">makita</label>
               </li>
               <li class="group__item">
-                <label class="checkbox">
-                  <input class="checkbox__input visually-hidden" type="checkbox" name="group--brands" id="check-dewalt" value="dewalt">
-                  <span class="checkbox__label">dewalt</span>
-                </label>
+                <input class="filter__checkbox visually-hidden" id="check-dewalt" type="checkbox" name="brands"
+                  value="dewalt" />
+                <label class="filter__label" for="check-dewalt">dewalt</label>
               </li>
               <li class="group__item">
-                <label class="checkbox">
-                  <input class="checkbox__input visually-hidden" type="checkbox" name="group--brands" id="check-hitachi" value="hitachi">
-                  <span class="checkbox__label">hitachi</span>
-                </label>
+                <input class="filter__checkbox visually-hidden" id="check-hitachi" type="checkbox" name="brands"
+                  value="hitachi" />
+                <label class="filter__label" for="check-hitachi">hitachi</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="group group--power">
-            <legend class="group__title group__title--power">Питание:</legend>
+            <legend class="group__title">Питание:</legend>
             <ul class="group__list">
               <li class="group__item">
-                <label class="radio">
-                  <input class="radio__input visually-hidden" type="radio" name="power" id="radio-rechargeable" value="rechargeable" checked>
-                  <span class="radio__label">Аккумуляторные</span>
-                </label>
+                <input class="filter__radio visually-hidden" id="battery" type="radio" name="power" value="battery" checked="checked" />
+                <label class="filter__label" for="battery">Аккумуляторные</label>
               </li>
               <li class="group__item">
-                <label class="radio">
-                  <input class="radio__input visually-hidden" type="radio" name="power" id="radio-network" value="network">
-                  <span class="radio__label">Сетевые</span>
-                </label>
+                <input class="filter__radio visually-hidden" id="mains-power" type="radio" name="power" value="mains-power" />
+                <label class="filter__label" for="mains-power">Сетевые</label>
               </li>
             </ul>
           </fieldset>

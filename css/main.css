@@ -405,6 +405,7 @@ a {
   z-index: 2;
 
   -webkit-transform: translateY(-50%);
+
           transform: translateY(-50%);
   opacity: 0.3;
 
@@ -754,6 +755,7 @@ a {
   right: 0;
 
   -webkit-transform: translateY(-50%) translateX(-20px) rotate(180deg);
+
           transform: translateY(-50%) translateX(-20px) rotate(180deg);
 }
 .promo-slider__list {
@@ -884,6 +886,7 @@ a {
   padding: 0 42px;
 
   -webkit-transform: translateY(-50%);
+
           transform: translateY(-50%);
   opacity: 0;
 
@@ -1403,45 +1406,39 @@ a {
 
   background-color: #f7f3ec;
 }
-.filter__form .group {
-  margin: 0;
-  padding: 0;
-  padding-bottom: 25px;
-
-  border: none;
-  border-bottom: 1px solid #f7f3ec;
-}
-.filter__form .group--power {
-  margin-bottom: 53px;
-
-  border-bottom: none;
-}
-.group__list {
+.filter ul {
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
+.filter__form .group {
+  margin: 0;
+  margin-bottom: 42px;
+  padding: 0;
+
+  border: none;
+}
 .group__title {
   margin: 0;
+  margin-bottom: 12px;
 
   font-weight: bold;
-  font-size: 17px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 1.67;
   color: #000000;
   text-transform: uppercase;
 }
 .group__item {
-  margin-bottom: 20px;
-}
-.group__item:last-child {
-  margin-bottom: 0;
-}
-.filter__form .group--range {
   margin-bottom: 16px;
+}
+.group__list .group__item:last-child {
+  margin-bottom: 0;
 }
 .group__title--range {
   margin-bottom: 13px;
+
+  letter-spacing: 0.5px;
 }
 .range-filter {
   width: 220px;
@@ -1529,109 +1526,124 @@ a {
   left: -8px;
 
   -webkit-transform: translateY(-50%);
+
           transform: translateY(-50%);
 }
 .filter__form .group--brands {
-  margin-bottom: 14px;
+  margin-bottom: 38px;
 }
-.group__title--brands {
-  margin-bottom: 14px;
+.filter__form .group--power {
+  margin-bottom: 78px;
 }
-.checkbox__label {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  padding-left: 35px;
-
+.filter__label {
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
 }
-.checkbox__label::before {
-  content: "";
-  position: absolute;
-  left: 0;
-
-  width: 23px;
-  height: 23px;
-
-  border: 2px solid #c5c5c5;
-  border-radius: 5px;
-}
-.checkbox__input:checked ~ .checkbox__label::after {
-  content: "";
-  position: absolute;
-  bottom: 2px;
-  left: 10px;
-
-  width: 11px;
-  height: 22px;
-
-  border-right: 4px solid #c5c5c5;
-  border-bottom: 4px solid #c5c5c5;
-  box-shadow: 2px 0 0 0 white, inset -2px 0 0 0 white;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.checkbox__input:disabled ~ .checkbox__label {
-  opacity: 0.4;
-}
-.checkbox:hover .checkbox__label::before,
-.checkbox:hover .checkbox__label::after,
-.checkbox:focus .checkbox__label::before,
-.checkbox:focus .checkbox__label::after {
-  border-color: #b5b5b5;
-}
-.group__title--power {
-  margin-bottom: 14px;
-
-  letter-spacing: 0.17px;
-}
-.radio__label {
+.filter__radio + .filter__label {
   position: relative;
 
-  display: flex;
-  align-items: center;
-  padding-left: 35px;
+  padding-left: 33px;
 
-  font-size: 15px;
-  line-height: 20px;
-  text-transform: uppercase;
+  cursor: pointer;
 }
-.radio__label::before {
+.filter__radio:disabled + .filter__label {
+  cursor: default;
+}
+.filter__radio + .filter__label::before {
   content: "";
   position: absolute;
+  top: 50%;
   left: 0;
 
   width: 25px;
   height: 25px;
 
-  border: 4px solid #c5c5c5;
+  border: 2px solid #4d4d4d;
   border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0.4;
+
+  transition: all 0.3s;
 }
-.radio__input:checked ~ .radio__label::after {
+.filter__radio:checked + .filter__label::after {
   content: "";
   position: absolute;
-  bottom: 4px;
-  left: 8px;
+  top: 50%;
+  left: 8.3px;
 
-  width: 5px;
-  height: 5px;
+  width: 9px;
+  height: 9px;
 
-  border: 5px solid #c5c5c5;
+  background-color: #4d4d4d;
   border-radius: 50%;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0.4;
+
+  transition: all 0.3s;
 }
-.radio__input:disabled ~ .radio__label {
+.filter__radio:not(:disabled) + .filter__label:hover::before,
+.filter__radio:not(:disabled):focus + .filter__label::before,
+.filter__radio:not(:disabled) + .filter__label:hover::after,
+.filter__radio:not(:disabled):focus + .filter__label::after {
+  opacity: 1;
+}
+.filter__radio:disabled + .filter__label {
+  opacity: 0.3;
+}
+.filter__checkbox + .filter__label {
+  position: relative;
+
+  padding-left: 33px;
+
+  cursor: pointer;
+}
+.filter__checkbox:disabled + .filter__label {
+  cursor: default;
+}
+.filter__checkbox + .filter__label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 23px;
+  height: 23px;
+
+  border: 2px solid #4d4d4d;
+  border-radius: 5px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   opacity: 0.4;
 }
-.radio:hover .radio__label::before,
-.radio:hover .radio__label::after,
-.radio:focus .radio__label::before,
-.radio:focus .radio__label::after {
-  border-color: #b5b5b5;
+.filter__checkbox:checked + .filter__label::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 10px;
+
+  width: 11px;
+  height: 22px;
+
+  border-right: 4px solid #4d4d4d;
+  border-bottom: 4px solid #4d4d4d;
+  box-shadow: 2px 0 0 0 white, inset -2px 0 0 0 white;
+  -webkit-transform: translateY(-50%);
+  -webkit-transform: rotate(45deg);
+          transform: translateY(-50%);
+          transform: rotate(45deg);
+  opacity: 0.4;
+}
+.filter__checkbox:not(:disabled) + .filter__label:hover::before,
+.filter__checkbox:not(:disabled):focus + .filter__label::before,
+.filter__checkbox:not(:disabled) + .filter__label:hover::after,
+.filter__checkbox:not(:disabled):focus + .filter__label::after {
+  opacity: 1;
+}
+.filter__checkbox:disabled + .filter__label {
+  opacity: 0.3;
 }
 .filter__button {
   width: 140px;
@@ -1686,6 +1698,7 @@ a {
   margin-right: 26px;
 
   -webkit-text-decoration: underline dotted #ee3643;
+
           text-decoration: underline dotted #ee3643;
 
   opacity: 0.3;
