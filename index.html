@@ -485,21 +485,25 @@
           </svg>
         </button>
         <form class="contact-form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="contact-form__group">
-            <label class="contact-form__label" for="name">
-              Ваше имя:
-              <input class="contact-form__imput" type="text" name="name" id="name" placeholder="Имя Фамилия" />
-            </label>
-            <label class="contact-form__label" for="email">
-              Ваш e-mail:
-              <input class="contact-form__imput" type="email" name="email" id="email" placeholder="email@example.com" />
-            </label>
+          <div class="contact-form__main">
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="name">
+                Ваше имя:
+                <input class="contact-form__imput" type="text" name="name" id="name" placeholder="Имя Фамилия" />
+              </label>
+              <label class="contact-form__label" for="email">
+                Ваш e-mail:
+                <input class="contact-form__imput" type="email" name="email" id="email" placeholder="email@example.com" />
+              </label>
+            </div>
+            <label class="contact-form__label" for="text-area">Текст письма:</label>
+            <textarea class="contact-form__textarea" id="text-area" name="text-area" placeholder="В свободной форме"></textarea>
           </div>
-          <label class="contact-form__label" for="text-area">Текст письма:</label>
-          <textarea class="contact-form__textarea" id="text-area" name="text-area" placeholder="В свободной форме"></textarea>
-          <button class="button contact-form__submit button--cart-full" type="submit">
-            Отправить
-          </button>
+          <div class="contact-form__bottom">
+            <button class="button contact-form__submit button--cart-full" type="submit">
+              Отправить
+            </button>
+          </div>
         </form>
       </div>
     </div>

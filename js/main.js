@@ -1,7 +1,6 @@
 var popupMap = document.querySelector(".popup__map");
 var popupForm = document.querySelector(".popup__contact-form");
 var popapCatalog = document.querySelector(".popup__catalog");
-
 if(popapCatalog) {
   var openBuy = document.querySelectorAll(".button--buy");
   var closeBuy = popapCatalog.querySelector(".popup__close");
@@ -17,26 +16,24 @@ if(popapCatalog) {
     });
   }
 } else {
-var openMap = document.querySelector(".maps");
-var closeMap = popupMap.querySelector(".popup__close");
-var openForm = document.querySelector(".contact__button");
-var closeForm = popupForm.querySelector(".popup__close");
-var popupInput = popupForm.querySelectorAll("input, textarea");
-var popupLogin = popupForm.querySelector("#name");
-var popupEmail = popupForm.querySelector("#email");
-var popupText = popupForm.querySelector("#text-area");
-var popupSubmit = popupForm.querySelector(".contact-form__submit");
-var isStorageSupport = true;
-var loginStorage = "";
-var emailStorage = "";
-
-try {
-  loginStorage = localStorage.getItem("login");
-  emailStorage = localStorage.getItem("email");
-} catch (error) {
-  isStorageSupport = false;
-}
-
+  var openMap = document.querySelector(".maps");
+  var closeMap = popupMap.querySelector(".popup__close");
+  var openForm = document.querySelector(".contact__button");
+  var closeForm = popupForm.querySelector(".popup__close");
+  var popupInput = popupForm.querySelectorAll("input, textarea");
+  var popupLogin = popupForm.querySelector("#name");
+  var popupEmail = popupForm.querySelector("#email");
+  var popupText = popupForm.querySelector("#text-area");
+  var popupSubmit = popupForm.querySelector(".contact-form__submit");
+  var isStorageSupport = true;
+  var loginStorage = "";
+  var emailStorage = "";
+  try {
+    loginStorage = localStorage.getItem("login");
+    emailStorage = localStorage.getItem("email");
+  } catch (error) {
+    isStorageSupport = false;
+  }
   openMap.addEventListener("click", function(e) {
     e.preventDefault();
     openModal(openMap, popupMap);
@@ -45,7 +42,7 @@ try {
     e.preventDefault();
     closePopup(closeMap, popupMap);
   });
-popupForm.addEventListener("submit", valid);
+  popupForm.addEventListener("submit", valid);
   openForm.addEventListener("click", function(e) {
     e.preventDefault();
     if(loginStorage && emailStorage) {
@@ -69,26 +66,20 @@ popupForm.addEventListener("submit", valid);
             center: [59.938872, 30.322617],
             zoom: 16,
             controls: [],
-            type: "yandex#map",
-
+            type: "yandex#map"
         }, {
             searchControlProvider: "yandex#search"
-        },
-        {
-          suppressMapOpenBlock: true,
+        }, {
+            suppressMapOpenBlock: true,
         }),
 
-        // Создаём макет содержимого.
         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
             `<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>`
         ),
-
         myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {
             hintContent: `191186, Санкт-Петербург,
             ул. Б. Конюшенная, д. 19/8`
         }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
             iconLayout: "default#image",
         })
         myMap.behaviors
@@ -97,10 +88,9 @@ popupForm.addEventListener("submit", valid);
         .add(myPlacemark)
   });
 }
-
 function valid(e) {
-  for (let i = 0; i < popupInput.length; i++) {
-    const element = popupInput[i];
+  for (var i = 0; i < popupInput.length; i++) {
+    var element = popupInput[i];
     element.setAttribute("required", true);
     if(!element.validity.valid) {
       popupError();
@@ -134,14 +124,12 @@ function openModal(btn, obj) {
     }
   });
 };
-
 function popupOpenAnimate(obj) {
   obj.classList.add("popup--open-animate");
   setTimeout(() => {
     obj.classList.remove("popup--open-animate");
   }, 2000);
 };
-
 function closePopup(btn, obj) {
   obj.classList.add("popup--close");
   setTimeout(() => {
@@ -150,7 +138,6 @@ function closePopup(btn, obj) {
   }, 800);
   btn.focus();
 };
-
 function popupOpenAnimate(obj) {
   obj.classList.add("popup--open-animate");
   setTimeout(() => {
