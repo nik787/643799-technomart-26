@@ -824,7 +824,7 @@ a {
 .goods-list__item {
   width: 100%;
   max-width: 218px;
-  max-height: 318px;
+  height: 318px;
   margin-bottom: 20px;
 
   text-align: center;
@@ -842,15 +842,22 @@ a {
 
   transition: box-shadow 0.5s;
 }
-.product:hover {
+.product--show,
+.product:hover,
+.product:focus {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
-.product:hover .product__popap {
+.product--show .product__popap,
+.product:hover .product__popap,
+.product:focus .product__popap {
   opacity: 1;
 }
-.product:hover .product__img {
+.product--show .product__img,
+.product:hover .product__img,
+.product:focus .product__img {
   opacity: 0;
 }
+
 .product--new::after {
   content: "";
   position: absolute;

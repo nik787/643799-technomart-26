@@ -144,5 +144,13 @@ function popupOpenAnimate(obj) {
     obj.classList.remove("popup--open-animate");
   }, 2000);
 };
-
-
+var product = document.querySelectorAll('.product');
+product.forEach(element => {
+  element.addEventListener('focus', function() {
+    var btn = element.querySelectorAll('.product__button');
+    btn[1].addEventListener('blur', function() {
+      element.classList.remove('product--show');
+    });
+    element.classList.add('product--show');
+  })
+})
